@@ -1,0 +1,31 @@
+.TH "TUNNEL RUNNER ASKPASS" "1" "December 23, 2008" "" ""
+.SH "NAME"
+tunnelrunner_askpass \- SSH Tunnel Runner Askpass
+.SH "SYNOPSIS"
+.B tunnelrunner_askpass
+.RI CONTROLLER
+.RI [ ssh-options ]
+.br 
+.SH "DESCRIPTION"
+This manual page documents briefly the
+.B tunnelrunner_askpass
+command.
+.PP 
+\fBTunnel Runner Askpass\fP is a wrapper for ssh-askpass that uses file
+locks to ensure that only one wrapped instance of ssh-askpass will run at a
+time. If a second instance of tunnelrunner_askpass is started, it will
+wait until a currently running instance has completed execution before
+running ssh-askpass. This prevents two instances of ssh-askpass from
+attempting to grab the keyboard at the same time.
+.PP
+\fBTunnel Runner Askpass\fP is not technically intended for command line
+use. Instead, it was written as a helper app for the \fBTunnel Manager\fP.
+.SH "OPTIONS"
+Command line options for tunnelrunner_askpass are the same as those for
+ssh-askpass.
+.SH "SEE ALSO"
+.BR ssh-askpass(1),
+.BR tunnelmanager(1)
+.SH "AUTHOR"
+Tunnel Runner Askpass and this documentation were written by Brandon Williams
+<opensource@subakutty.net>.

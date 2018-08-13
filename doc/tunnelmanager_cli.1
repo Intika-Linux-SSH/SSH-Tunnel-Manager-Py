@@ -1,0 +1,117 @@
+.TH "TUNNEL MANAGER CLI" "1" "December 31, 2008" "" ""
+.SH "NAME"
+tunnelmanager_cli \- SSH Tunnel Manager CLI
+.SH "SYNOPSIS"
+.B tunnelmanager_cli
+.RI [ options ]
+.br 
+.SH "DESCRIPTION"
+This manual page documents briefly the
+.B tunnelmanager_cli
+command.
+.PP 
+\fBTunnel Manager\fP is a program that allows users to easily manage a
+configurable list of SSH tunnels and their required SSH keys. This program is
+a command line interface for viewing and editing the list of tunnels and
+ssh keys.
+.SH "OPTIONS"
+These programs follow the usual GNU command line syntax, with long
+options starting with two dashes (`\-').
+A summary of options is included below.
+.TP 
+.B \-h, \-\-help
+Show summary of options.
+.TP
+.B \-P, \-\-properties=FILENAME
+The application configuration file to load.
+.TP 
+.B \-f, \-\-file=FILENAME
+Use the specified tunnel file, instead of the one specified in the
+properties file.
+.TP
+.B \-c, \-\-command=COMMAND
+The command to be executed on the configuration. See \fBCOMMANDS\fB.
+.TP
+.B \-n, \-\-name=NAME
+The tunnel name for commands that act on tunnels.
+.TP
+.B \-H, \-\-host=HOST
+The host to connect to for tunneling.
+.TP
+.B \-p, \-\-port=PORT
+The port number to connect to on the tunnel host. The default is 22.
+.TP
+.B \-k, \-\-key=ID
+The ID of the required SSH key for the tunnel. The default is None.
+.TP
+.B \-L, \-\-local=[[NAME:]BINDIP:]LOCALPORT:REMOTEHOST:REMOTEPORT
+Local port-forwarding tunnel argument as used by ssh.
+.TP
+.B \-R, \-\-remote=[[NAME:]BINDIP:]LOCALPORT:REMOTEHOST:REMOTEPORT
+Remote port-forwarding tunnel argument as used by ssh.
+.TP
+.B \-D, \-\-dynamic=[[NAME:]BINDIP:]PORT
+Dynamic SOCKS proxy tunnel argument as used by ssh.
+.TP
+.B \-K, \-\-keyfile=FILENAME
+Private key file.
+.SH "COMMANDS"
+The following commands are supported.
+.TP
+.B list\-t
+List the attributes and port forwardings associated with the named SSH tunnel,
+or all tunnels if no specific tunnel is named.
+.TP
+.B add\-t
+Add a tunnel to the configuration using the attributes provided by the
+rest of the command line options. The \-n tunnel name argument is required,
+and the command will fail if the specified tunnel already exists.
+.TP
+.B update\-t
+Update the configuration for an existing tunnel. Only the attributes provided
+by the rest of the command line options will be changed. All specified port
+forwardings will be added to the tunnel and none will be removed. The \-n
+tunnel name argument is required, and the command will fail if the
+specified tunnel does not exist.
+.TP
+.B delete-t
+Delete a tunnel from the configuration. The \-n tunnel name argument is
+required, and the command will fail if the specified tunnel does not exist.
+.TP
+.B delete-p
+Delete one or more ports from the configuration for an existing tunnel. The
+\-n tunnel name argument is required, and the command will fail if the
+specified tunnel does not exist.
+.TP
+.B list\-k
+List the SSH keys defined in the configuration.
+.TP
+.B add\-k
+Add the specified keyfile to the configuration. The \-K keyfile argument
+is required, and the command will fail if the specified keyfile is
+already present in the configuration.
+.TP
+.B delete\-k
+Delete the specified keyfile from the configuration. The \-K keyfile
+argument is required, and the command will fail if the specified keyfile
+does not exist.
+.TP
+.B load\-k
+Load all keys defined in configuration.
+.TP
+.B unload\-k
+Unload all keys.
+.SH "FILES"
+.TP
+.B $HOME/.TunnelRunner/default.xml
+The default tunnel configuration file.
+.TP
+.B $HOME/.TunnelRunner/properties.conf
+The default application configuration file.
+.SH "SEE ALSO"
+.BR ssh(1),
+.BR ssh\-add(1),
+.BR tunnelmanager(1)
+.SH "AUTHOR"
+TunnelManager and this documentation were written by Brandon Williams
+<opensource@subakutty.net>.

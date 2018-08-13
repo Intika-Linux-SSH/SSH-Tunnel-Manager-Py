@@ -1,0 +1,62 @@
+.TH "TUNNEL MANAGER" "1" "March 16, 2013" "" ""
+.SH "NAME"
+tunnelmanager \- SSH Tunnel Manager
+.SH "SYNOPSIS"
+.B tunnelmanager
+.RI [ options ]
+.br 
+.SH "DESCRIPTION"
+This manual page documents briefly the
+.B tunnelmanager
+command.
+.PP 
+\fBTunnel Manager\fP is a program that allows users to easily manage a
+configurable list of SSH tunnels and their required SSH keys. This program is
+fundamentally a wrapper around the \fBssh-add\fR and \fBtunnelrunner\fR
+commands.
+.SH "OPTIONS"
+These programs follow the usual GNU command line syntax, with long
+options starting with two dashes (`\-').
+A summary of options is included below.
+.TP 
+.B \-h, \-\-help
+Show summary of options.
+.TP
+.B \-P, \-\-properties=FILENAME
+The application configuration file to load.
+.TP 
+.B \-f, \-\-file=FILENAME
+Use the specified state file on startup, instead of the one specified
+in the properties file.
+.TP 
+.B \-a, \-\-autostart
+Automatically loads the keys and starts the tunnels indicated by the state
+file. The option only has en effect if the filename option is also
+specified. Only the tunnels that were active when the state file was saved
+will be autostarted.
+.SH "FILES"
+.TP
+.B $HOME/.TunnelRunner/default.xml
+The default tunnel configuration file.
+.TP
+.B $HOME/.TunnelRunner/properties.conf
+The application configuration file. Two hidden variables for advances users
+can be manually reconfigured in the \fB[BASE]\fR section of the properties
+file.
+
+\fBipcmdpath\fR sets the full path to the system ip command. Default: /sbin/ip
+
+\fBsshbaseargs\fR sets the base arguments used when executing the ssh command.
+Default: ['-N', '-t', '-x', '-o', 'ExitOnForwardFailure=yes']
+
+\fBExamples:\fR
+  [BASE]
+  ipcmdpath = /usr/sbin/ip
+  sshbaseargs = ['-N', '-T', '-x', '-o', 'ExitOnForwardFailure=yes']
+.SH "SEE ALSO"
+.BR ssh\-add(1),
+.BR tunnelrunner(1),
+.BR ssh_config(5)
+.SH "AUTHOR"
+TunnelManager and this documentation were written by Brandon Williams
+<opensource@subakutty.net>.

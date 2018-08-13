@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Tunnel Manager
+Comment=Manage SSH Tunnels
+TryExec=tunnelmanager
+Exec=tunnelmanager
+Type=Application
+Categories=GTK;Network;
+StartupNotify=true
+Icon=gtk-network

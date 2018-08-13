@@ -1,0 +1,38 @@
+.TH "TUNNEL RUNNER" "1" "December 23, 2008" "" ""
+.SH "NAME"
+tunnelrunner \- SSH Tunnel Runner
+.SH "SYNOPSIS"
+.B tunnelrunner
+.RI CONTROLLER
+.RI [ ssh-options ]
+.br 
+.SH "DESCRIPTION"
+This manual page documents briefly the
+.B tunnelrunner
+command.
+.PP 
+\fBTunnel Runner\fP is a program that opens ssh connections for tunneling
+purposes. The main reason for its existance is to simplify ssh v1 tunneling,
+since the standard ssh \-N option does not work for ssh v1. This program opens
+what, to the tunnel host, appears to be an interactive session. In this way,
+it is possible to avoid opening a terminal session for the tunnel.
+.PP
+\fBTunnel Runner\fP is not technically intended for command line use. Instead,
+it was written as a helper app for the \fBTunnel Manager\fP.
+.SH "OPTIONS"
+.TP
+.B CONTROLLER
+The first argument to tunnelrunner must be either GUI or CLI, indicating
+whether ssh should use ssh-askpass or the controlling tty to request
+passwords and/or passphrases.
+.PP
+All other options passed to the program will be forwarded on to ssh. The 
+caller will typically build a list of ssh \-L and \-D options, to be 
+followed by the hostname of the tunnel server.
+.SH "SEE ALSO"
+.BR ssh(1),
+.BR ssh-askpass(1),
+.BR tunnelmanager(1)
+.SH "AUTHOR"
+TunnelRunner and this documentation were written by Brandon Williams
+<opensource@subakutty.net>.

@@ -1,0 +1,90 @@
+#!/usr/bin/env python
+
+# Copyright (c) 2008-2013 Brandon williams
+#
+# AUTHOR:
+# Brandon Williams <opensource@subakutty.net>
+#
+# This file is part of TunnelManager
+#
+# TunnelManager is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 2, as published by
+# the Free Software Foundation.
+#
+# TunnelManager is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Tunnelmanager; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+
+import os
+import errno
+import stat
+import subprocess
+import sys
+import time
+
+def acquireLockFile(lockfile):
+    """Acquire the lock file. We will try once per second for 10 minutes."""
+
+    max_wait = 60; # wait up to 60 seconds
+    max_age = 300; # assume it's bad after 5 minutes
+    fd = 0
+
+    while True:
+        try:
+            fd = os.open(lockfile,os.O_EXCL|os.O_RDWR|os.O_CREAT)
+            break
+        except OSError, e:
+            if e.errno != errno.EEXIST:
+                raise
+            # file already exists. find out how old it is.
+            f = None
+            s = None
+            try:
+                f = open(lockfile, "r")
+                s = os.stat(lockfile)
+            except OSError, e:
+                if e.errno != errno.EEXIST:
+                    print >>sys.stderr, "%s exists but stat() failed: %s" % (lockfile,e.strerror)
+                    sys.exit(1)
+                    raise
+                continue; #File is gone now. Just try again.
+
+            # didn't create lock file, still there, how old is it?
+            now = int(time.time())
+            if((now - s[stat.ST_MTIME]) > max_age):
+                pid = f.readline()
+                print >>sys.stderr, "%s has been locked for more than %d seconds by PID %s; breaking lock" % (lockfile, max_age, pid)
+                os.remove(lockfile)
+            elif((now - s[stat.ST_MTIME]) > max_wait):
+                # wait up to 10 minutes for others to complete before failure
+                pid = f.readline()
+                print >>sys.stderr, "%s has been locked for more than %d seconds by PID %s" % (lockfile, max_wait, pid)
+                sys.exit(1)
+            # it hasn't been locked too long; wait and try again
+            f.close()
+            time.sleep(1)
+
+    # this process got the lock
+    return fd
+
+
+if __name__ == "__main__":
+
+    lockfile = os.environ['HOME'] + "/.tunnelrunner.lock"
+    lockfd = acquireLockFile(lockfile)
+    os.write(lockfd,"%d\n" % os.getpid())
+
+    cmd = [ 'ssh-askpass' ]
+    cmd.extend(sys.argv[1:])
+    returncode = subprocess.call(cmd)
+
+    os.remove(lockfile)
+    os.close(lockfd)
+
+    sys.exit(returncode)

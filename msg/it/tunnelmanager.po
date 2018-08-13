@@ -1,0 +1,627 @@
+# Italian translation for tunnelmanager
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the tunnelmanager package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tunnelmanager\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-11-08 01:35-0500\n"
+"PO-Revision-Date: 2011-09-12 13:07+0000\n"
+"Last-Translator: Francesco Apollonio <f.apollonio@ldlabs.org>\n"
+"Language-Team: Italian <it@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2011-09-21 21:32+0000\n"
+"X-Generator: Launchpad (build 13996)\n"
+
+#: TunnelManager/CLI.py:79
+#, python-format
+msgid "Unrecognized command: %s"
+msgstr "Comando Sconosciuto: %s"
+
+#: TunnelManager/CLI.py:100 TunnelManager/GUI.py:98
+msgid "file"
+msgstr "documento"
+
+#: TunnelManager/CLI.py:100
+msgid "command"
+msgstr "comando"
+
+#: TunnelManager/CLI.py:101
+msgid "options"
+msgstr "opzioni"
+
+#: TunnelManager/CLI.py:101 TunnelManager/GUI.py:99
+msgid "output this message"
+msgstr "stampa questo messaggio"
+
+#: TunnelManager/CLI.py:102 TunnelManager/GUI.py:100
+msgid "config file to load"
+msgstr "file di configurazione da caricare"
+
+#: TunnelManager/CLI.py:102 TunnelManager/GUI.py:100
+msgid "properties file to load"
+msgstr "file delle proprietà da caricare"
+
+#: TunnelManager/CLI.py:103
+msgid "command to execute"
+msgstr "comando da eseguire"
+
+#: TunnelManager/CLI.py:103
+msgid "tunnel name"
+msgstr "nome del tunnel"
+
+#: TunnelManager/CLI.py:104
+msgid "tunnel host"
+msgstr "host del tunnel"
+
+#: TunnelManager/CLI.py:104
+msgid "tunnel port"
+msgstr "porta del tunnel"
+
+#: TunnelManager/CLI.py:105
+msgid "key ID"
+msgstr "ID della chiave"
+
+#: TunnelManager/CLI.py:105
+msgid "local port forward"
+msgstr "inoltra porta locale"
+
+#: TunnelManager/CLI.py:106
+msgid "remote port forward"
+msgstr "inoltra porta remota"
+
+#: TunnelManager/CLI.py:107
+msgid "dynamic SOCKS proxy port"
+msgstr "porta del proxy SOCKS dinamico"
+
+#: TunnelManager/CLI.py:108
+msgid "SSH private key filename"
+msgstr "nome del file della chiave SSH privata"
+
+#: TunnelManager/CLI.py:128 TunnelManager/GUI.py:139
+msgid "Extra arguments: "
+msgstr "Argomenti extra: "
+
+#: TunnelManager/CLI.py:177 TunnelManager/GUI.py:134
+msgid "Unhandled option: "
+msgstr "Opzione non gestita: "
+
+#: TunnelManager/CLI.py:183
+msgid "No command specified."
+msgstr "Nessun comando specificato."
+
+#: TunnelManager/CLI.py:203
+#, python-format
+msgid "Invalid %(type)s fwd port spec: %(opt)s"
+msgstr "%(type)s specifica della porta d'inoltr non valida: %(opt)s"
+
+#: TunnelManager/CLI.py:204
+msgid "local"
+msgstr "locale"
+
+#: TunnelManager/CLI.py:204
+msgid "remote"
+msgstr "remoto"
+
+#: TunnelManager/CLI.py:215
+#, python-format
+msgid "Invalid dynamic port spec: %s"
+msgstr "Specifica della porta dinamica non valida: %s"
+
+#: TunnelManager/CLI.py:231
+#, python-format
+msgid "Tunnel %s does not exist"
+msgstr "Il tunnel %s non esiste"
+
+#: TunnelManager/CLI.py:234
+#, python-format
+msgid "No Tunnels defined in %s"
+msgstr "Nessun tunnel definito in %s"
+
+#: TunnelManager/CLI.py:250 TunnelManager/CLI.py:283 TunnelManager/CLI.py:311
+#: TunnelManager/CLI.py:329
+msgid "No tunnel name specified."
+msgstr "Nessun nome specificato per il tunnel."
+
+#: TunnelManager/CLI.py:255
+#, python-format
+msgid "Specified tunnel exists: %s"
+msgstr "Il tunnel specificato esiste: %s"
+
+#: TunnelManager/CLI.py:259
+#, python-format
+msgid "No tunnel host specified for %s"
+msgstr "Nessun host specificato per il tunnel %s"
+
+#: TunnelManager/CLI.py:264
+#, python-format
+msgid "No ports specified for %s"
+msgstr "Nessuna porta specificata per %s"
+
+#: TunnelManager/CLI.py:290 TunnelManager/CLI.py:318 TunnelManager/CLI.py:336
+#, python-format
+msgid "Specified tunnel does not exist: %s"
+msgstr "Il tunnel specificato non esiste: %s"
+
+#: TunnelManager/CLI.py:348
+#, python-format
+msgid "No match for port in tunnel %(tun)s: %(port)s"
+msgstr "Porta non trovata nel tunnel %(tun)s: %(port)s"
+
+#: TunnelManager/CLI.py:359
+#, python-format
+msgid "No keys defined in %s"
+msgstr "Nessuna chiave definita in %s"
+
+#: TunnelManager/CLI.py:368
+msgid "No keys specified to add."
+msgstr "Non è stata specificata nessuna chiave da aggiungere."
+
+#: TunnelManager/CLI.py:373
+#, python-format
+msgid "Specified key exists: %s"
+msgstr "La chiave specificata esiste: %s"
+
+#: TunnelManager/CLI.py:384
+msgid "No keys specified to delete."
+msgstr "Nessuna chiave specificata per essere eliminata."
+
+#: TunnelManager/CLI.py:390
+#, python-format
+msgid "Specified key does not exist: %s"
+msgstr "La chiave specificata non esiste: %s"
+
+#: TunnelManager/Controller.py:109
+#, python-format
+msgid "Error loading file: %(file)s: (%(errno)d) %(errstr)s"
+msgstr ""
+"Errore durante il caricamento del file: %(file)s: (%(errno)d) %(errstr)s"
+
+#: TunnelManager/Controller.py:111 TunnelManager/Controller.py:113
+#, python-format
+msgid "Error parsing XML file: %(file)s: %(err)s"
+msgstr "Errore durante l'analisi del file XML: %(file)s: %(err)s"
+
+#: TunnelManager/Controller.py:132
+msgid "Invalid XML: SSHKey without filename"
+msgstr "File XML non valido: SSHKey senza nome del file"
+
+#: TunnelManager/Controller.py:173 TunnelManager/Controller.py:192
+msgid "Invalid XML: Port missing attribute(s)"
+msgstr "File XML non valido: Manca l'attributo Port"
+
+#: TunnelManager/Controller.py:199
+msgid "Invalid XML: invalid/missing port type"
+msgstr "File XML non valido: tipo della porta non valido o mancante"
+
+#: TunnelManager/Controller.py:225
+#, python-format
+msgid "Error saving tunnel config: (%(errno)d) %(errstr)s"
+msgstr ""
+"Errore durante il salvataggio della configurazione: (%(errno)d) %(errstr)s"
+
+#: TunnelManager/Controller.py:283
+#, python-format
+msgid "Error removing tunnel %(tun)s = %(err)s"
+msgstr "Errore durante la rimozione del tunnel %(tun)s = %(err)s"
+
+#: TunnelManager/Controller.py:293
+#, python-format
+msgid "Error removing key %(key)s = %(err)s"
+msgstr "Errore durante la rimozione della chiave %(key)s = %(err)s"
+
+#: TunnelManager/GUI.py:75
+msgid "XML files"
+msgstr "File XML"
+
+#: TunnelManager/GUI.py:98
+msgid "directory"
+msgstr "cartella"
+
+#: TunnelManager/GUI.py:99
+msgid "restore tunnel state"
+msgstr "ripristina lo stato del tunnel"
+
+#: TunnelManager/GUI.py:101
+msgid "alternate glade file location"
+msgstr "percorso al file glade alternativo"
+
+#: TunnelManager/GUI.py:177
+msgid "SSH Tunnel Manager - "
+msgstr "SSH Tunnel Manager - "
+
+#: TunnelManager/GUI.py:181
+msgid "Untitled"
+msgstr "Senza Titolo"
+
+#: TunnelManager/GUI.py:188
+msgid "State"
+msgstr "Stato"
+
+#: TunnelManager/GUI.py:189 data/tunnelmanager.glade.h:16
+msgid "Name"
+msgstr "Nome"
+
+#: TunnelManager/GUI.py:190 data/tunnelmanager.glade.h:44
+msgid "User ID"
+msgstr "ID Utente"
+
+#: TunnelManager/GUI.py:191 data/tunnelmanager.glade.h:38
+msgid "Tunnel Host"
+msgstr "Host del tunnel"
+
+#: TunnelManager/GUI.py:192 data/tunnelmanager.glade.h:40
+msgid "Tunnel Port"
+msgstr "Porta del tunnel"
+
+#: TunnelManager/GUI.py:193 data/tunnelmanager.glade.h:24
+msgid "Required Key"
+msgstr "Chiave richiesta"
+
+#: TunnelManager/GUI.py:194 TunnelManager/GUI.py:216 TunnelManager/GUI.py:234
+#: data/tunnelmanager.glade.h:41
+msgid "Type"
+msgstr "Tipo"
+
+#: TunnelManager/GUI.py:195 TunnelManager/GUI.py:217
+#: data/tunnelmanager.glade.h:6
+msgid "Bind IP"
+msgstr "Bind IP"
+
+#: TunnelManager/GUI.py:196 TunnelManager/GUI.py:218
+#: data/tunnelmanager.glade.h:13
+msgid "Local Port"
+msgstr "Porta locale"
+
+#: TunnelManager/GUI.py:197 TunnelManager/GUI.py:219
+#: data/tunnelmanager.glade.h:19
+msgid "Remote Host"
+msgstr "Host remoto"
+
+#: TunnelManager/GUI.py:198 TunnelManager/GUI.py:220
+#: data/tunnelmanager.glade.h:20
+msgid "Remote Port"
+msgstr "Porta remota"
+
+#: TunnelManager/GUI.py:232
+msgid "File Name"
+msgstr "Nome del file"
+
+#: TunnelManager/GUI.py:233
+msgid "ID"
+msgstr "ID"
+
+#: TunnelManager/GUI.py:235
+msgid "Size"
+msgstr "Dimensione"
+
+#: TunnelManager/GUI.py:236
+msgid "Fingerprint"
+msgstr "Firma digitale"
+
+#: TunnelManager/GUI.py:332
+msgid "Tunnel(s) Active. Really quit?"
+msgstr "Ci sono tunnel attivi. Vuoi uscire veramente?"
+
+#: TunnelManager/GUI.py:383 TunnelManager/GUI.py:394
+msgid "Tunnel(s) Active. Stop before clearing config"
+msgstr ""
+"Ci sono tunnel attivi. Fermali prima di cancellare la configurazione."
+
+#: TunnelManager/GUI.py:450
+#, python-format
+msgid "Tunnel %s is active. Stop to edit."
+msgstr "Il tunnel %s è attivo. Fermalo prima di modificarlo."
+
+#: TunnelManager/GUI.py:540
+msgid "The 'Name' field is required"
+msgstr "Il campo \"Nome\" è richiesto"
+
+#: TunnelManager/GUI.py:543
+msgid "The 'Tunnel Host' field is required"
+msgstr "Il campo \"Host del tunnel\" è richiesto"
+
+#: TunnelManager/GUI.py:546
+msgid "The 'Tunnel Port' field is required"
+msgstr "Il campo \"Porta del Tunnel\" è richiesto"
+
+#: TunnelManager/GUI.py:549
+msgid "Specify a port to tunnel."
+msgstr "Specifica una porta su cui effettuare il tunnel."
+
+#: TunnelManager/GUI.py:555
+#, python-format
+msgid "Invalid 'Tunnel Port': %s"
+msgstr "Porta del tunnel non valida: %s"
+
+#: TunnelManager/GUI.py:560
+#, python-format
+msgid "'Tunnel Port' out of range: %d"
+msgstr "Porta del tunnel oltre i limiti: %d"
+
+#: TunnelManager/GUI.py:617 data/tunnelmanager.glade.h:37
+msgid "Stop Tunnel"
+msgstr "Ferma il tunnel"
+
+#: TunnelManager/GUI.py:620 data/tunnelmanager.glade.h:35
+msgid "Start Tunnel"
+msgstr "Avvia il tunnel"
+
+#: TunnelManager/GUI.py:622 data/tunnelmanager.glade.h:8
+msgid "Edit Tunnel"
+msgstr "Modifica il tunnel"
+
+#: TunnelManager/GUI.py:624 data/tunnelmanager.glade.h:23
+msgid "Remove Tunnel"
+msgstr "Elimina il tunnel"
+
+#: TunnelManager/GUI.py:664
+#, python-format
+msgid "Tunnel %s is active. Stop to remove."
+msgstr "Il tunnel %s è attivo. Fermalo per eliminarlo."
+
+#: TunnelManager/GUI.py:708
+msgid "Local"
+msgstr "Locale"
+
+#: TunnelManager/GUI.py:709
+msgid "Remote"
+msgstr "Remoto"
+
+#: TunnelManager/GUI.py:710
+msgid "Dynamic"
+msgstr "Dinamica"
+
+#: TunnelManager/GUI.py:777
+msgid "The 'Local Port' field is required"
+msgstr "Il campo \"Porta Locale\" è richiesto"
+
+#: TunnelManager/GUI.py:784
+#, python-format
+msgid "Invalid 'Local Port': %s"
+msgstr "Porta locale non valida: %s"
+
+#: TunnelManager/GUI.py:789
+#, python-format
+msgid "'Local Port' out of range: %d"
+msgstr "Porta locale oltre i limiti: %d"
+
+#: TunnelManager/GUI.py:794
+msgid "The 'Remote Host' field is required"
+msgstr "Il campo \"Host remoto\" è richiesto"
+
+#: TunnelManager/GUI.py:797
+msgid "The 'Remote Port' field is required"
+msgstr "Il campo \"Porta remota\" è richiesta"
+
+#: TunnelManager/GUI.py:804
+#, python-format
+msgid "Invalid 'Remote Port': %s"
+msgstr "Porta remota non valida: %s"
+
+#: TunnelManager/GUI.py:809
+#, python-format
+msgid "'Remote Port' out of range: %d"
+msgstr "Porta remota oltre i limiti: %d"
+
+#: TunnelManager/GUI.py:828
+msgid "Select Private Key"
+msgstr "Seleziona una chiave privata"
+
+#: TunnelManager/GUI.py:997
+msgid "Select Default Configuration"
+msgstr "Seleziona la configurazione di base"
+
+#: TunnelManager/GUI.py:1015
+#, python-format
+msgid "Unexpected termination of tunnel: %s"
+msgstr "Chiusura del tunnel inaspettata: %s"
+
+#: TunnelManager/GUI.py:1061
+msgid "Open File"
+msgstr "Apri il file"
+
+#: TunnelManager/GUI.py:1066
+msgid "Save File"
+msgstr "Salva il file"
+
+#: TunnelManager/GUI.py:1080
+msgid "All files"
+msgstr "Tutti i file"
+
+#: TunnelManager/StatusIcon.py:33 data/tunnelmanager.glade.h:29
+msgid "SSH Tunnel Manager"
+msgstr "SSH Tunnel Manager"
+
+#: TunnelManager/StatusIcon.py:43 data/tunnelmanager.glade.h:10
+msgid "Load "
+msgstr "Carica "
+
+#: TunnelManager/StatusIcon.py:45 data/tunnelmanager.glade.h:42
+msgid "Unload"
+msgstr "Scarica"
+
+#: TunnelManager/StatusIcon.py:47 data/tunnelmanager.glade.h:46
+msgid "View Agent"
+msgstr "Visualizza l'agente"
+
+#: TunnelManager/StatusIcon.py:51
+msgid "Keys"
+msgstr "Chiavi"
+
+#: TunnelManager/StatusIcon.py:71
+msgid "Quit"
+msgstr "Esci"
+
+#: TunnelManager/TunnelInfo.py:123
+#, python-format
+msgid "Error removing port %(port)s = %(err)s"
+msgstr "Si è verificato un errore rimuovendo la porta %(port)s = %(err)s"
+
+#: TunnelManager/TunnelInfo.py:184
+#, python-format
+msgid "Tunnel already active: %s"
+msgstr "Tunnel già attivo: %s"
+
+#: TunnelManager/TunnelInfo.py:192
+#, python-format
+msgid "Required key unknown to agent: %s"
+msgstr "La chiave richiesta è sconosciuta dall'agente: %s"
+
+#: TunnelManager/TunnelInfo.py:224
+#, python-format
+msgid "Tunnel already inactive: %s"
+msgstr "Tunnel già inattivo: %s"
+
+#: TunnelManager/TunnelInfo.py:235
+#, python-format
+msgid "Failed closing tunnel: %(name)s (%(errno)d/%(errstr)s)"
+msgstr "Chiusura del tunnel non riuscita: %(name)s (%(errno)d/%(errstr)s)"
+
+#: data/tunnelmanager.glade.h:1
+msgid "Add Key"
+msgstr "Aggiungi chiave"
+
+#: data/tunnelmanager.glade.h:2
+msgid "Add Port"
+msgstr "Aggiungi Porta"
+
+#: data/tunnelmanager.glade.h:3
+msgid "Add Tunnel"
+msgstr "Aggiungi Tunnel"
+
+#: data/tunnelmanager.glade.h:4
+msgid "Add/Remove Keys"
+msgstr "Aggiungi/Rimuovi chiavi"
+
+#: data/tunnelmanager.glade.h:5
+msgid "Autosave on Exit"
+msgstr "Salvataggio automatico in uscita"
+
+#: data/tunnelmanager.glade.h:7
+msgid "Default Config"
+msgstr "Configurazione di default"
+
+#: data/tunnelmanager.glade.h:9
+msgid "Launch in System Tray"
+msgstr "Avvia nella barra di sistema"
+
+#: data/tunnelmanager.glade.h:11
+msgid "Load Keys"
+msgstr "Carica chiavi"
+
+#: data/tunnelmanager.glade.h:12
+msgid "Load Keys on Startup"
+msgstr "Carica chiavi all'avvio"
+
+#: data/tunnelmanager.glade.h:14
+msgid "Manage"
+msgstr "Gestione"
+
+#: data/tunnelmanager.glade.h:15
+msgid "Minimize to System Tray"
+msgstr "Minimizza nella barra di sistema"
+
+#: data/tunnelmanager.glade.h:17
+msgid "Port Info"
+msgstr "Informazioni sulla porta"
+
+#: data/tunnelmanager.glade.h:18
+msgid "Preferences"
+msgstr "Preferenze"
+
+#: data/tunnelmanager.glade.h:21
+msgid "Remove Key"
+msgstr "Rimuovi la chiave"
+
+#: data/tunnelmanager.glade.h:22
+msgid "Remove Port"
+msgstr "Rimuovi la porta"
+
+#: data/tunnelmanager.glade.h:25
+msgid "SSH Agent"
+msgstr "Agente SSH"
+
+#: data/tunnelmanager.glade.h:26
+msgid "SSH Agent PID"
+msgstr "PID dell'agente SSH"
+
+#: data/tunnelmanager.glade.h:27
+msgid "SSH Authorization Socket"
+msgstr "Socket di autorizzazione SSH"
+
+#: data/tunnelmanager.glade.h:28
+msgid "SSH Keys"
+msgstr "Chiave SSH"
+
+#: data/tunnelmanager.glade.h:30
+msgid "Save Config"
+msgstr "Salva la configurazione"
+
+#: data/tunnelmanager.glade.h:31
+msgid "Save/Restore Tunnel State"
+msgstr "Salva/Ripristina lo stato del tunnel"
+
+#: data/tunnelmanager.glade.h:32
+msgid "Select..."
+msgstr "Seleziona..."
+
+#: data/tunnelmanager.glade.h:33
+msgid "Show System Tray Icon"
+msgstr "Mostra l'icona del vassoio di sistema"
+
+#: data/tunnelmanager.glade.h:34
+msgid "Start"
+msgstr "Avvia"
+
+#: data/tunnelmanager.glade.h:36
+msgid "Stop"
+msgstr "Ferma"
+
+#: data/tunnelmanager.glade.h:39
+msgid "Tunnel Info"
+msgstr "Informazioni sul tunnel"
+
+#: data/tunnelmanager.glade.h:43
+msgid "Unload Keys"
+msgstr "Scarica chiavi"
+
+#: data/tunnelmanager.glade.h:45
+msgid "View"
+msgstr "Visualizza"
+
+#: data/tunnelmanager.glade.h:47
+msgid "_File"
+msgstr "_File"
+
+#: data/tunnelmanager.glade.h:48
+msgid "_Help"
+msgstr "_Aiuto"
+
+#: data/tunnelmanager.glade.h:49
+msgid "_Keys"
+msgstr "_Chiavi"
+
+#: data/tunnelmanager.glade.h:50
+msgid "_Load"
+msgstr "_Carica"
+
+#: data/tunnelmanager.glade.h:51
+msgid "_Manage"
+msgstr "_Gestione"
+
+#: data/tunnelmanager.glade.h:52
+msgid "_Tunnel"
+msgstr "_Tunnel"
+
+#: data/tunnelmanager.glade.h:53
+msgid "_Unload"
+msgstr "_Scarica"
+
+#: data/tunnelmanager.glade.h:54
+msgid "_View Agent"
+msgstr "_Visualizza Agente"

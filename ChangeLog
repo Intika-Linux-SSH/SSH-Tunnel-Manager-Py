@@ -1,0 +1,172 @@
+tunnelmanager 0.7.7.2:
+
+	* Re-fixed bug 1174755 -- Work around bug in libdbusmenu
+
+tunnelmanager 0.7.7.1:
+
+	* Fixed bug 1174755 -- Fixed regression in status icon menu handling
+
+tunnelmanager 0.7.7:
+
+	* Fixed bug 1174755 -- Use unity indicator when possible
+
+tunnelmanager 0.7.6:
+
+	* Add hidden config variable sshbaseargs for bug 1127546 and bug 1127551
+
+tunnelmanager 0.7.5.1:
+
+	* Update cs catalog
+
+tunnelmanager 0.7.5:
+
+	* Fixed bug 478113 -- switch from libglade to gtk.builder
+
+	* Fixed bug 902939 -- hide main window from unity launcher
+
+	* Update de catalog
+
+tunnelmanager 0.7.4.1:
+
+	* Fixed bug 902589 -- use CheckMenuItem in StatusIcon menu
+
+tunnelmanager 0.7.4:
+
+	* Fixed bug 855215 -- add Italian catalog
+
+	* Fixed bug 851099 -- name and bindip breaks dynamic port
+
+tunnelmanager 0.7.3.3:
+
+	* Updated pl, ru, and zh_CN catalogs
+
+tunnelmanager 0.7.3.2:
+
+	* Updated pl catalog
+
+tunnelmanager 0.7.3.1:
+
+	* Fixed message catalog inclusion for pl and zh_CN
+
+tunnelmanager 0.7.3:
+
+	* Fixed bug 538919 -- store required-key by filename
+
+	* Fixed bug 539620 -- use ExitOnForwardFailure
+
+	* Fixed bug 604774 -- update message catalogs
+
+	* Fixed bug 594602 -- per port naming
+
+tunnelmanager 0.7.2:
+
+	* Fixed bug 512938 -- no autosave on exit after reconfig
+
+tunnelmanager 0.7.1:
+
+	* Fixed bug 478112 -- specify correct localization directory
+
+	* Fixed bug 461204 -- another translation to add (Indonesian)
+
+tunnelmanager 0.7:
+
+	* Fixed bug 405831 -- minimize-to-tray on close click if enabled
+
+	* Fixed bug 405832 -- warn before quit if tunnels are active
+
+	* Fixed bug 407699 -- add russion catalog and update the others
+
+tunnelmanager 0.6:
+
+	* Fixed bug 382031 -- Add support for user-specified bind IP.
+
+	* Fixed bug 377258 -- Add German, Danish, and Spanish catalogs.
+
+	* Fixed bug 326653 -- window not displayed when status icon disabled
+
+tunnelmanager 0.5.2:
+
+	* Fixed bug 321168 -- Add support for gnome-keyring as ssh-agent
+
+	* Fixed bug 317100 -- Keys do not autoload if save/restore is false
+
+	* Fixed bug 322546 -- delay autostart if until there's an active link
+
+tunnelmanager 0.5.1:
+
+	* Fixed bug 314497 -- required key list broken
+
+tunnelmanager 0.5:
+
+	* Fixed bug 313888 -- tunnelrunner exit on signal not detected
+
+	* Fixed bug 227353 -- perform dialog validation on [OK] click
+
+	* Fixed bug 227354 -- add translation support
+
+tunnelmanager 0.4.5.1:
+
+	* Fixed source packaging method.
+
+tunnelmanager 0.4.5:
+
+	* Fixed bug 312974 -- error using 'Save' for default file
+
+	* Fixed bug 312976 -- support userid for tunnels
+
+	* Fixed bug 312978 -- clicking on status icon should minimize
+
+tunnelmanager 0.4.4:
+
+	* Fixed bug 312618 -- reopened and submitted new fix
+
+tunnelmanager 0.4.3:
+
+	* Fixed bug 312618 -- cannot autostart tunnels if keys not loaded
+
+tunnelmanager 0.4.2:
+
+	* Fixed bug 312594 -- tunnelmanager_cli broken
+
+tunnelmanager 0.4.1:
+
+	* Fixed bug 312533 -- handle no key or key not loaded on tunnel load
+
+	* Fixed bug 312348 -- add 'minimize on startup' option
+
+tunnelmanager 0.4:
+
+	* Fixed bug 227372 -- minimize to system tray
+
+	* Fixed bug 227367 -- add preferences panel
+
+tunnelmanager 0.3:
+
+	* Fixed bug 310972 -- redesign for interface flexibility
+
+	* Fixed bug 227361 -- add dropdown to list known keys in tunnel dialog
+
+	* Fixed bug 311760 -- use default config file if none specified
+
+tunnelmanager 0.2.1:
+
+	* Fixed bug 304078 -- GUI.Controller should init sshAddRunning
+
+	* Fixed bug 303718 -- "true" should be "True" in checkRequiredKey
+
+tunnelmanager 0.2:
+
+	* Fixed bug 228880 -- tunnel doesn't close when port forwarding fails
+
+	* Fixed bug 278867 -- add support for remote-fwd tunnels (-R)
+
+	* Fixed bug 278868 -- move menu item from Accessories to Network
+
+tunnelmanager 0.1.1:
+
+	* Fixed bug 226880 -- now reports useful error if ssh fails
+
+tunnelmanager 0.1:
+
+	* Initial release
+

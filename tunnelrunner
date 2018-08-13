@@ -1,0 +1,135 @@
+#!/usr/bin/env python
+
+# Copyright (c) 2008-2013 Brandon williams
+#
+# AUTHOR:
+# Brandon Williams <opensource@subakutty.net>
+#
+# This file is part of TunnelManager
+#
+# TunnelManager is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 2, as published by
+# the Free Software Foundation.
+#
+# TunnelManager is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Tunnelmanager; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+
+import os
+import sys
+import signal
+import re
+import termios
+import fcntl
+
+#Global so that the signal handler has access
+tunnelRunner = None
+
+
+def sighandler(signum, frame):
+    """The signal handler"""
+    if(signum != signal.SIGCHLD):
+        tunnelRunner.stop(signum)
+
+
+
+class TunnelRunner(object):
+    """This class is used to execute an instance of an SSH tunnel"""
+
+    def __init__(self, controller, argv):
+        """This object constructor"""
+
+        if(not controller in ('GUI','CLI')):
+            print >>sys.stderr, "Error: unrecognized controller: %s" % controller
+
+        self.controller = controller
+        self.argv = [ "/usr/bin/ssh" ]
+        self.argv.extend(argv)
+
+	self.child = 0
+
+	os.setuid(os.geteuid())
+
+
+    def start(self):
+	"""Start the tunnel"""
+
+	signal.signal(signal.SIGCHLD, sighandler)
+	signal.signal(signal.SIGTERM, sighandler)
+	signal.signal(signal.SIGALRM, sighandler)
+	signal.signal(signal.SIGHUP, sighandler)
+	signal.signal(signal.SIGINT, sighandler)
+	signal.signal(signal.SIGQUIT, sighandler)
+	signal.signal(signal.SIGPIPE, sighandler)
+
+	try:
+	    self.rpipe, self.wpipe = os.pipe()
+	    self.child = os.fork()
+	except OSError, e:
+	    print >>sys.stderr, "system call failed creating child: %d (%s)" % (e.errno, e.strerror)
+	    sys.exit(1)
+
+	if(self.child == 0):
+	    #Child process here
+	    stderr = 2
+	    try:
+                if(self.controller == "GUI"):
+                    #GUI wants disconnect from controlling terminal
+                    if(os.isatty(0)):
+                        fcntl.ioctl(0,termios.TIOCNOTTY)
+                    binPath = os.path.dirname(os.path.realpath(sys.argv[0]))
+                    askpassCmd = binPath + "/tunnelrunner_askpass"
+                    os.environ['SSH_ASKPASS'] = askpassCmd
+		os.close(self.rpipe)
+		devNull = os.open("/dev/null",os.O_WRONLY)
+		os.dup2(devNull, 1)
+		os.dup2(self.wpipe, 0)
+		os.dup2(self.wpipe, 2)
+		os.execv(self.argv[0], self.argv)
+	    except OSError, e:
+		print >>sys.stderr, "system call failed executing child: %d (%s)" % (e.errno, e.strerror)
+                sys.exit(1)
+
+        else:
+            #Parent process here
+            try:
+                os.close(self.wpipe)
+                while True:
+                    line = os.read(self.rpipe, 1024)
+                    if(line == ""):
+                        #EOF here
+                        pid,status = os.waitpid(self.child, 0)
+                        exitcode = ((status&0xFF00)>>8)
+                        sys.exit(exitcode)
+                    else:
+                        print >>sys.stderr, "%s" % line.rstrip()
+                        if(re.compile('Could not request.*forwarding').search(line)):
+                            sys.exit(1)
+            except OSError, e:
+                print >>sys.stderr, "system call failed executing parent: %d (%s)" % (e.errno, e.strerror)
+                sys.exit(1)
+
+        self.child = 0
+
+
+    def stop(self,signum):
+        """Stop the tunnel"""
+        try:
+            if(self.child != 0):
+                os.kill(self.child,signum)
+                signal.signal(signum,signal.SIG_DFL)
+                os.kill(os.getpid(),signum)
+        except OSError, e:
+            print >>sys.stderr, "system call failed handling signal: %d (%s)" % (e.errno, e.strerror)
+
+
+
+if __name__ == "__main__":
+    tunnelRunner = TunnelRunner(sys.argv[1], sys.argv[2:])
+    tunnelRunner.start()

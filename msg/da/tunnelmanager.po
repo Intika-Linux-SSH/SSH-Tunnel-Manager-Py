@@ -1,0 +1,624 @@
+# Danish translation for tunnelmanager
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the tunnelmanager package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tunnelmanager\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-11-08 01:35-0500\n"
+"PO-Revision-Date: 2009-05-07 17:10+0000\n"
+"Last-Translator: Jimmy Frydkær Jensen <thewolf40@mailme.dk>\n"
+"Language-Team: Danish <da@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-08 15:28+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: TunnelManager/CLI.py:79
+#, python-format
+msgid "Unrecognized command: %s"
+msgstr "Ikke genkendt kommando: %s"
+
+#: TunnelManager/CLI.py:100 TunnelManager/GUI.py:98
+msgid "file"
+msgstr "fil"
+
+#: TunnelManager/CLI.py:100
+msgid "command"
+msgstr "kommando"
+
+#: TunnelManager/CLI.py:101
+msgid "options"
+msgstr "valg"
+
+#: TunnelManager/CLI.py:101 TunnelManager/GUI.py:99
+msgid "output this message"
+msgstr "denne meddelelse i uddata"
+
+#: TunnelManager/CLI.py:102 TunnelManager/GUI.py:100
+msgid "config file to load"
+msgstr "konfigurer fil til indlæs"
+
+#: TunnelManager/CLI.py:102 TunnelManager/GUI.py:100
+msgid "properties file to load"
+msgstr "egenskaber for fil til indlæs"
+
+#: TunnelManager/CLI.py:103
+msgid "command to execute"
+msgstr "kommando til udførelse"
+
+#: TunnelManager/CLI.py:103
+msgid "tunnel name"
+msgstr "tunnel navn"
+
+#: TunnelManager/CLI.py:104
+msgid "tunnel host"
+msgstr "tunnel vært"
+
+#: TunnelManager/CLI.py:104
+msgid "tunnel port"
+msgstr "tunnel port"
+
+#: TunnelManager/CLI.py:105
+msgid "key ID"
+msgstr "nøgle ID"
+
+#: TunnelManager/CLI.py:105
+msgid "local port forward"
+msgstr "lokal port til vidresend"
+
+#: TunnelManager/CLI.py:106
+msgid "remote port forward"
+msgstr "fjern-port til vidresend"
+
+#: TunnelManager/CLI.py:107
+msgid "dynamic SOCKS proxy port"
+msgstr "dynamisk SOCKS proxy-port"
+
+#: TunnelManager/CLI.py:108
+msgid "SSH private key filename"
+msgstr "SSH privat nøglenavn"
+
+#: TunnelManager/CLI.py:128 TunnelManager/GUI.py:139
+msgid "Extra arguments: "
+msgstr "Ekstra argumenter: "
+
+#: TunnelManager/CLI.py:177 TunnelManager/GUI.py:134
+msgid "Unhandled option: "
+msgstr "Ikke håndterede valg: "
+
+#: TunnelManager/CLI.py:183
+msgid "No command specified."
+msgstr "Ingen kommando specificeret."
+
+#: TunnelManager/CLI.py:203
+#, python-format
+msgid "Invalid %(type)s fwd port spec: %(opt)s"
+msgstr "Ugyldig %(type)s fwd port spec: %(opt)s"
+
+#: TunnelManager/CLI.py:204
+msgid "local"
+msgstr "lokal"
+
+#: TunnelManager/CLI.py:204
+msgid "remote"
+msgstr "fjern"
+
+#: TunnelManager/CLI.py:215
+#, python-format
+msgid "Invalid dynamic port spec: %s"
+msgstr "Ugyldig dynamisk port spec: %s"
+
+#: TunnelManager/CLI.py:231
+#, python-format
+msgid "Tunnel %s does not exist"
+msgstr "Tunnel %s eksisterer ikke"
+
+#: TunnelManager/CLI.py:234
+#, python-format
+msgid "No Tunnels defined in %s"
+msgstr "Ingen tunnel defineret i %s"
+
+#: TunnelManager/CLI.py:250 TunnelManager/CLI.py:283 TunnelManager/CLI.py:311
+#: TunnelManager/CLI.py:329
+msgid "No tunnel name specified."
+msgstr "Ingen tunnel-navn specificeret."
+
+#: TunnelManager/CLI.py:255
+#, python-format
+msgid "Specified tunnel exists: %s"
+msgstr "Specificerede tunnel eksisterer: %s"
+
+#: TunnelManager/CLI.py:259
+#, python-format
+msgid "No tunnel host specified for %s"
+msgstr "Ingen tunnel-vært specificeret %s"
+
+#: TunnelManager/CLI.py:264
+#, python-format
+msgid "No ports specified for %s"
+msgstr "Ingen porte specificeret for %s"
+
+#: TunnelManager/CLI.py:290 TunnelManager/CLI.py:318 TunnelManager/CLI.py:336
+#, python-format
+msgid "Specified tunnel does not exist: %s"
+msgstr "Den specificerede tunnel eksisterer ikke: %s"
+
+#: TunnelManager/CLI.py:348
+#, python-format
+msgid "No match for port in tunnel %(tun)s: %(port)s"
+msgstr "Ingen match for port i tunnel %(tun)s: %(port)s"
+
+#: TunnelManager/CLI.py:359
+#, python-format
+msgid "No keys defined in %s"
+msgstr "Ingen nøgler defineret i %s"
+
+#: TunnelManager/CLI.py:368
+msgid "No keys specified to add."
+msgstr "Ingen nøgler specificeret for tilføjelse."
+
+#: TunnelManager/CLI.py:373
+#, python-format
+msgid "Specified key exists: %s"
+msgstr "Specificerede nøgle eksisterer: %s"
+
+#: TunnelManager/CLI.py:384
+msgid "No keys specified to delete."
+msgstr "Ingen nøgler til sletning blev specificeret."
+
+#: TunnelManager/CLI.py:390
+#, python-format
+msgid "Specified key does not exist: %s"
+msgstr "Specificerede nøgle eksisterer ikke: %s"
+
+#: TunnelManager/Controller.py:109
+#, python-format
+msgid "Error loading file: %(file)s: (%(errno)d) %(errstr)s"
+msgstr "Fejl ved indlæsning af fil: %(file)s: (%(errno)d) %(errstr)s"
+
+#: TunnelManager/Controller.py:111 TunnelManager/Controller.py:113
+#, python-format
+msgid "Error parsing XML file: %(file)s: %(err)s"
+msgstr "Fejl ved parsing af XML-fil: %(file)s: %(err)s"
+
+#: TunnelManager/Controller.py:132
+msgid "Invalid XML: SSHKey without filename"
+msgstr "Ugyldig XML: SSH-nøgle uden filnavn"
+
+#: TunnelManager/Controller.py:173 TunnelManager/Controller.py:192
+msgid "Invalid XML: Port missing attribute(s)"
+msgstr "Ugyldig XML: port mangler atributte(r)"
+
+#: TunnelManager/Controller.py:199
+msgid "Invalid XML: invalid/missing port type"
+msgstr "Ugyldig XML: ugyldig/manglende port type"
+
+#: TunnelManager/Controller.py:225
+#, python-format
+msgid "Error saving tunnel config: (%(errno)d) %(errstr)s"
+msgstr "Fejl ved gemning af tunnel-konfiguration: (%(errno)d) %(errstr)s"
+
+#: TunnelManager/Controller.py:283
+#, python-format
+msgid "Error removing tunnel %(tun)s = %(err)s"
+msgstr "Fejl ved fjernelse af tunnel %(tun)s = %(err)s"
+
+#: TunnelManager/Controller.py:293
+#, python-format
+msgid "Error removing key %(key)s = %(err)s"
+msgstr "Fejl ved fjernelse af nøgle %(key)s = %(err)s"
+
+#: TunnelManager/GUI.py:75
+msgid "XML files"
+msgstr "XML-filer"
+
+#: TunnelManager/GUI.py:98
+msgid "directory"
+msgstr "mappe"
+
+#: TunnelManager/GUI.py:99
+msgid "restore tunnel state"
+msgstr "genskab tunnel-tilstand"
+
+#: TunnelManager/GUI.py:101
+msgid "alternate glade file location"
+msgstr "vekslende glade-fil lokalitet"
+
+#: TunnelManager/GUI.py:177
+msgid "SSH Tunnel Manager - "
+msgstr "SSH tunnel-håndtering "
+
+#: TunnelManager/GUI.py:181
+msgid "Untitled"
+msgstr "Uden titel"
+
+#: TunnelManager/GUI.py:188
+msgid "State"
+msgstr "Tilstand"
+
+#: TunnelManager/GUI.py:189 data/tunnelmanager.glade.h:16
+msgid "Name"
+msgstr "Navn"
+
+#: TunnelManager/GUI.py:190 data/tunnelmanager.glade.h:44
+msgid "User ID"
+msgstr "Bruger ID"
+
+#: TunnelManager/GUI.py:191 data/tunnelmanager.glade.h:38
+msgid "Tunnel Host"
+msgstr "Tunnel-vært"
+
+#: TunnelManager/GUI.py:192 data/tunnelmanager.glade.h:40
+msgid "Tunnel Port"
+msgstr "Tunnel-port"
+
+#: TunnelManager/GUI.py:193 data/tunnelmanager.glade.h:24
+msgid "Required Key"
+msgstr "Krævet nøgle"
+
+#: TunnelManager/GUI.py:194 TunnelManager/GUI.py:216 TunnelManager/GUI.py:234
+#: data/tunnelmanager.glade.h:41
+msgid "Type"
+msgstr "Type"
+
+#: TunnelManager/GUI.py:195 TunnelManager/GUI.py:217
+#: data/tunnelmanager.glade.h:6
+msgid "Bind IP"
+msgstr ""
+
+#: TunnelManager/GUI.py:196 TunnelManager/GUI.py:218
+#: data/tunnelmanager.glade.h:13
+msgid "Local Port"
+msgstr "Lokal port"
+
+#: TunnelManager/GUI.py:197 TunnelManager/GUI.py:219
+#: data/tunnelmanager.glade.h:19
+msgid "Remote Host"
+msgstr "Fjern-vært"
+
+#: TunnelManager/GUI.py:198 TunnelManager/GUI.py:220
+#: data/tunnelmanager.glade.h:20
+msgid "Remote Port"
+msgstr "Fjern-port"
+
+#: TunnelManager/GUI.py:232
+msgid "File Name"
+msgstr "Filnavn"
+
+#: TunnelManager/GUI.py:233
+msgid "ID"
+msgstr "ID"
+
+#: TunnelManager/GUI.py:235
+msgid "Size"
+msgstr "Størrelse"
+
+#: TunnelManager/GUI.py:236
+msgid "Fingerprint"
+msgstr "Fingeraftryk"
+
+#: TunnelManager/GUI.py:332
+msgid "Tunnel(s) Active. Really quit?"
+msgstr ""
+
+#: TunnelManager/GUI.py:383 TunnelManager/GUI.py:394
+msgid "Tunnel(s) Active. Stop before clearing config"
+msgstr "Tunnele(r) aktive. Stop før rydning af konfig"
+
+#: TunnelManager/GUI.py:450
+#, python-format
+msgid "Tunnel %s is active. Stop to edit."
+msgstr "Tunnel %s er aktiv. Stop for at redigere."
+
+#: TunnelManager/GUI.py:540
+msgid "The 'Name' field is required"
+msgstr "'Navne'-feltet er påkrævet"
+
+#: TunnelManager/GUI.py:543
+msgid "The 'Tunnel Host' field is required"
+msgstr "'Tunnel-vært'-feltet er påkrævet"
+
+#: TunnelManager/GUI.py:546
+msgid "The 'Tunnel Port' field is required"
+msgstr "'Tunnel-port'-feltet er påkrævet"
+
+#: TunnelManager/GUI.py:549
+msgid "Specify a port to tunnel."
+msgstr "Specificer en port til tunnel."
+
+#: TunnelManager/GUI.py:555
+#, python-format
+msgid "Invalid 'Tunnel Port': %s"
+msgstr "Ugyldig 'Tunnel-port': %s"
+
+#: TunnelManager/GUI.py:560
+#, python-format
+msgid "'Tunnel Port' out of range: %d"
+msgstr "'Tunnel-port' uden for område: %d"
+
+#: TunnelManager/GUI.py:617 data/tunnelmanager.glade.h:37
+msgid "Stop Tunnel"
+msgstr "Stop Tunnel"
+
+#: TunnelManager/GUI.py:620 data/tunnelmanager.glade.h:35
+msgid "Start Tunnel"
+msgstr "Start Tunnel"
+
+#: TunnelManager/GUI.py:622 data/tunnelmanager.glade.h:8
+msgid "Edit Tunnel"
+msgstr "Rediger tunnel"
+
+#: TunnelManager/GUI.py:624 data/tunnelmanager.glade.h:23
+msgid "Remove Tunnel"
+msgstr "Fjern tunnel"
+
+#: TunnelManager/GUI.py:664
+#, python-format
+msgid "Tunnel %s is active. Stop to remove."
+msgstr "Tunnel %s er aktiv. Stop for at fjerne."
+
+#: TunnelManager/GUI.py:708
+msgid "Local"
+msgstr "Lokal"
+
+#: TunnelManager/GUI.py:709
+msgid "Remote"
+msgstr "Fjern"
+
+#: TunnelManager/GUI.py:710
+msgid "Dynamic"
+msgstr "Dynamisk"
+
+#: TunnelManager/GUI.py:777
+msgid "The 'Local Port' field is required"
+msgstr "'Lokal-port'-feltet er påkrævet"
+
+#: TunnelManager/GUI.py:784
+#, python-format
+msgid "Invalid 'Local Port': %s"
+msgstr "Ugyldig 'Lokal-port': %s"
+
+#: TunnelManager/GUI.py:789
+#, python-format
+msgid "'Local Port' out of range: %d"
+msgstr "'Lokal-port' uden for område: %d"
+
+#: TunnelManager/GUI.py:794
+msgid "The 'Remote Host' field is required"
+msgstr "'Fjern-vært'-feltet er påkrævet"
+
+#: TunnelManager/GUI.py:797
+msgid "The 'Remote Port' field is required"
+msgstr "'Fjern-port'-feltet er påkrævet"
+
+#: TunnelManager/GUI.py:804
+#, python-format
+msgid "Invalid 'Remote Port': %s"
+msgstr "Ugyldig 'Fjern-port': %s"
+
+#: TunnelManager/GUI.py:809
+#, python-format
+msgid "'Remote Port' out of range: %d"
+msgstr "'Fjern-port' uden for område: %d"
+
+#: TunnelManager/GUI.py:828
+msgid "Select Private Key"
+msgstr "Vælg privat nøgle"
+
+#: TunnelManager/GUI.py:997
+msgid "Select Default Configuration"
+msgstr "Vælg standard konfiguration"
+
+#: TunnelManager/GUI.py:1015
+#, python-format
+msgid "Unexpected termination of tunnel: %s"
+msgstr "Uventet afbrydelse af tunnnelen: %s"
+
+#: TunnelManager/GUI.py:1061
+msgid "Open File"
+msgstr ""
+
+#: TunnelManager/GUI.py:1066
+msgid "Save File"
+msgstr ""
+
+#: TunnelManager/GUI.py:1080
+msgid "All files"
+msgstr ""
+
+#: TunnelManager/StatusIcon.py:33 data/tunnelmanager.glade.h:29
+msgid "SSH Tunnel Manager"
+msgstr "SSH-tunnel håndtering"
+
+#: TunnelManager/StatusIcon.py:43 data/tunnelmanager.glade.h:10
+msgid "Load "
+msgstr "Indlæs "
+
+#: TunnelManager/StatusIcon.py:45 data/tunnelmanager.glade.h:42
+msgid "Unload"
+msgstr "udlæs"
+
+#: TunnelManager/StatusIcon.py:47 data/tunnelmanager.glade.h:46
+msgid "View Agent"
+msgstr "Se-agent"
+
+#: TunnelManager/StatusIcon.py:51
+msgid "Keys"
+msgstr ""
+
+#: TunnelManager/StatusIcon.py:71
+msgid "Quit"
+msgstr ""
+
+#: TunnelManager/TunnelInfo.py:123
+#, python-format
+msgid "Error removing port %(port)s = %(err)s"
+msgstr "Fejl ved fjernelse af port %(port)s = %(err)s"
+
+#: TunnelManager/TunnelInfo.py:184
+#, python-format
+msgid "Tunnel already active: %s"
+msgstr "Tunnel allerede aktiv: %s"
+
+#: TunnelManager/TunnelInfo.py:192
+#, python-format
+msgid "Required key unknown to agent: %s"
+msgstr "Krævede nøgle ukendt for agent: %s"
+
+#: TunnelManager/TunnelInfo.py:224
+#, python-format
+msgid "Tunnel already inactive: %s"
+msgstr "Tunnel allerede inaktiv: %s"
+
+#: TunnelManager/TunnelInfo.py:235
+#, python-format
+msgid "Failed closing tunnel: %(name)s (%(errno)d/%(errstr)s)"
+msgstr "Fejl ved lukning af tunnel: %(name)s (%(errno)d/%(errstr)s)"
+
+#: data/tunnelmanager.glade.h:1
+msgid "Add Key"
+msgstr "Tilføj nøgle"
+
+#: data/tunnelmanager.glade.h:2
+msgid "Add Port"
+msgstr "Tilføj port"
+
+#: data/tunnelmanager.glade.h:3
+msgid "Add Tunnel"
+msgstr "Tilføj tunnel"
+
+#: data/tunnelmanager.glade.h:4
+msgid "Add/Remove Keys"
+msgstr "Tilføj/fjern nøgler"
+
+#: data/tunnelmanager.glade.h:5
+msgid "Autosave on Exit"
+msgstr "Autogem ved slut"
+
+#: data/tunnelmanager.glade.h:7
+msgid "Default Config"
+msgstr "Standard konfig"
+
+#: data/tunnelmanager.glade.h:9
+msgid "Launch in System Tray"
+msgstr "Start i systembakken"
+
+#: data/tunnelmanager.glade.h:11
+msgid "Load Keys"
+msgstr "Indlæs nøgler"
+
+#: data/tunnelmanager.glade.h:12
+msgid "Load Keys on Startup"
+msgstr "Indlæs nøgler ved opstart"
+
+#: data/tunnelmanager.glade.h:14
+msgid "Manage"
+msgstr "Håndter"
+
+#: data/tunnelmanager.glade.h:15
+msgid "Minimize to System Tray"
+msgstr "Minimer til systembakke"
+
+#: data/tunnelmanager.glade.h:17
+msgid "Port Info"
+msgstr "Port info"
+
+#: data/tunnelmanager.glade.h:18
+msgid "Preferences"
+msgstr "Indstillinger"
+
+#: data/tunnelmanager.glade.h:21
+msgid "Remove Key"
+msgstr "Fjern nøgle"
+
+#: data/tunnelmanager.glade.h:22
+msgid "Remove Port"
+msgstr "Fjern port"
+
+#: data/tunnelmanager.glade.h:25
+msgid "SSH Agent"
+msgstr "SSH Agent"
+
+#: data/tunnelmanager.glade.h:26
+msgid "SSH Agent PID"
+msgstr "SSH-agent PID"
+
+#: data/tunnelmanager.glade.h:27
+msgid "SSH Authorization Socket"
+msgstr "SSH autorisations-Socjet"
+
+#: data/tunnelmanager.glade.h:28
+msgid "SSH Keys"
+msgstr "SSH-nøgler"
+
+#: data/tunnelmanager.glade.h:30
+msgid "Save Config"
+msgstr "Gem konfig"
+
+#: data/tunnelmanager.glade.h:31
+msgid "Save/Restore Tunnel State"
+msgstr "Gen/gendan tunnel tilstand"
+
+#: data/tunnelmanager.glade.h:32
+msgid "Select..."
+msgstr "Vælg..."
+
+#: data/tunnelmanager.glade.h:33
+msgid "Show System Tray Icon"
+msgstr "Vis systembakke-ikon"
+
+#: data/tunnelmanager.glade.h:34
+msgid "Start"
+msgstr "Start"
+
+#: data/tunnelmanager.glade.h:36
+msgid "Stop"
+msgstr "Stop"
+
+#: data/tunnelmanager.glade.h:39
+msgid "Tunnel Info"
+msgstr "Tunnel Info"
+
+#: data/tunnelmanager.glade.h:43
+msgid "Unload Keys"
+msgstr "Udlæs nøgler"
+
+#: data/tunnelmanager.glade.h:45
+msgid "View"
+msgstr "Se"
+
+#: data/tunnelmanager.glade.h:47
+msgid "_File"
+msgstr "_Fil"
+
+#: data/tunnelmanager.glade.h:48
+msgid "_Help"
+msgstr "_Hjælp"
+
+#: data/tunnelmanager.glade.h:49
+msgid "_Keys"
+msgstr "_nøgler"
+
+#: data/tunnelmanager.glade.h:50
+msgid "_Load"
+msgstr "_Indlæs"
+
+#: data/tunnelmanager.glade.h:51
+msgid "_Manage"
+msgstr "_Håndter"
+
+#: data/tunnelmanager.glade.h:52
+msgid "_Tunnel"
+msgstr "_Tunnel"
+
+#: data/tunnelmanager.glade.h:53
+msgid "_Unload"
+msgstr "_Udlæs"
+
+#: data/tunnelmanager.glade.h:54
+msgid "_View Agent"
+msgstr "_Se-agent"

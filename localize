@@ -1,0 +1,53 @@
+#!/bin/sh
+
+CLEAN_LANGUAGES="en"
+LANGUAGES="cs da de en es id it pl pt_BR ru zh_CN"
+
+cd $(dirname $0)
+
+if [ -n "$1" ] && [ "$1" = "refresh" ]; then
+
+    for f in data/tunnelmanager.glade.h msg/tunnelmanager.pot; do
+        if [ -e $f ]; then
+	    rm -f $f
+        fi
+    done
+
+    for lang in $CLEAN_LANGUAGES; do
+        rm -f msg/$lang/tunnelmanager.po
+    done
+fi
+
+if [ ! -e msg/tunnelmanager.pot ]; then
+
+    if [ ! -e data/tunnelmanager.glade.h ]; then
+        intltool-extract --type=gettext/glade --update data/tunnelmanager.glade
+    	[ $? -ne 0 ] && exit 1
+    fi
+
+    xgettext --language=Python --keyword=_ --keyword=N_ --output=msg/tunnelmanager.pot TunnelManager/*.py data/tunnelmanager.glade.h
+    [ $? -ne 0 ] && exit 1
+fi
+
+for lang in $LANGUAGES; do
+
+    if [ ! -d msg/$lang ]; then
+        mkdir msg/$lang || exit 1
+    fi
+
+    if [ ! -e msg/$lang/tunnelmanager.po ]; then
+        msginit --input=msg/tunnelmanager.pot --output-file=msg/$lang/tunnelmanager.po --locale=$lang
+	[ $? -ne 0 ] && exit 1
+    fi
+
+    if [ ! -d msg/$lang/LC_MESSAGES ]; then
+        mkdir msg/$lang/LC_MESSAGES || exit 1
+    fi
+
+    if [ -e msg/$lang/LC_MESSAGES/tunnelmanager.mo ]; then
+         rm -f msg/$lang/LC_MESSAGES/tunnelmanager.mo
+    fi
+
+    msgfmt --output-file=msg/$lang/LC_MESSAGES/tunnelmanager.mo msg/$lang/tunnelmanager.po
+    [ $? -ne 0 ] && exit 1
+done

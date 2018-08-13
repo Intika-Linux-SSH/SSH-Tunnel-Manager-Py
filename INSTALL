@@ -1,0 +1,7 @@
+On a system with the required python version and modules (the latest
+Ubuntu LTS, others may have to experiment), run:
+
+    ./setup.py install
+
+Note that this is not as complete as a package install at the moment -
+e.g. there is no uninstall option.

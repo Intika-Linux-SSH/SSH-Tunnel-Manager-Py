@@ -1,0 +1,624 @@
+# Czech translation for tunnelmanager
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the tunnelmanager package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tunnelmanager\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-11-08 01:35-0500\n"
+"PO-Revision-Date: 2012-06-20 20:29+0000\n"
+"Last-Translator: Zbyněk Schwarz <Unknown>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-07-12 19:56+0000\n"
+"X-Generator: Launchpad (build 15593)\n"
+
+#: TunnelManager/CLI.py:79
+#, python-format
+msgid "Unrecognized command: %s"
+msgstr "Nerozpoznaný příkaz: %s"
+
+#: TunnelManager/CLI.py:100 TunnelManager/GUI.py:98
+msgid "file"
+msgstr "soubor"
+
+#: TunnelManager/CLI.py:100
+msgid "command"
+msgstr "příkaz"
+
+#: TunnelManager/CLI.py:101
+msgid "options"
+msgstr "volby"
+
+#: TunnelManager/CLI.py:101 TunnelManager/GUI.py:99
+msgid "output this message"
+msgstr "vypsat tuto zprávu"
+
+#: TunnelManager/CLI.py:102 TunnelManager/GUI.py:100
+msgid "config file to load"
+msgstr "konfigurační soubor k načtení"
+
+#: TunnelManager/CLI.py:102 TunnelManager/GUI.py:100
+msgid "properties file to load"
+msgstr "soubor vlastností k načtení"
+
+#: TunnelManager/CLI.py:103
+msgid "command to execute"
+msgstr "příkaz k provedení"
+
+#: TunnelManager/CLI.py:103
+msgid "tunnel name"
+msgstr "název tunelu"
+
+#: TunnelManager/CLI.py:104
+msgid "tunnel host"
+msgstr "hostitel tunelu"
+
+#: TunnelManager/CLI.py:104
+msgid "tunnel port"
+msgstr "port tunelu"
+
+#: TunnelManager/CLI.py:105
+msgid "key ID"
+msgstr "ID klíče"
+
+#: TunnelManager/CLI.py:105
+msgid "local port forward"
+msgstr "přesměrování místního portu"
+
+#: TunnelManager/CLI.py:106
+msgid "remote port forward"
+msgstr "přesměrování vzdáleného portu"
+
+#: TunnelManager/CLI.py:107
+msgid "dynamic SOCKS proxy port"
+msgstr "dynamický port proxy SOCK5"
+
+#: TunnelManager/CLI.py:108
+msgid "SSH private key filename"
+msgstr "Název souboru soukromého klíče SSH"
+
+#: TunnelManager/CLI.py:128 TunnelManager/GUI.py:139
+msgid "Extra arguments: "
+msgstr "Dodatečné argumenty: "
+
+#: TunnelManager/CLI.py:177 TunnelManager/GUI.py:134
+msgid "Unhandled option: "
+msgstr "Neošetřená volba: "
+
+#: TunnelManager/CLI.py:183
+msgid "No command specified."
+msgstr "Nebyl zadán žádný příkaz."
+
+#: TunnelManager/CLI.py:203
+#, python-format
+msgid "Invalid %(type)s fwd port spec: %(opt)s"
+msgstr "Neplatné zadání přesm. portu %(type)s: %(opt)s"
+
+#: TunnelManager/CLI.py:204
+msgid "local"
+msgstr "místní"
+
+#: TunnelManager/CLI.py:204
+msgid "remote"
+msgstr "vzdálený"
+
+#: TunnelManager/CLI.py:215
+#, python-format
+msgid "Invalid dynamic port spec: %s"
+msgstr "Neplatné zadání dynamického portu: %s"
+
+#: TunnelManager/CLI.py:231
+#, python-format
+msgid "Tunnel %s does not exist"
+msgstr "Tunel %s neexistuje"
+
+#: TunnelManager/CLI.py:234
+#, python-format
+msgid "No Tunnels defined in %s"
+msgstr "V %s neurčeny žádné tunely"
+
+#: TunnelManager/CLI.py:250 TunnelManager/CLI.py:283 TunnelManager/CLI.py:311
+#: TunnelManager/CLI.py:329
+msgid "No tunnel name specified."
+msgstr "Nezadán žádný název tunelu."
+
+#: TunnelManager/CLI.py:255
+#, python-format
+msgid "Specified tunnel exists: %s"
+msgstr "Zadaný tunel existuje: %s"
+
+#: TunnelManager/CLI.py:259
+#, python-format
+msgid "No tunnel host specified for %s"
+msgstr "Pro %s nezadán žádný hostitel tunelu"
+
+#: TunnelManager/CLI.py:264
+#, python-format
+msgid "No ports specified for %s"
+msgstr "Pro %s nezadány žádné porty"
+
+#: TunnelManager/CLI.py:290 TunnelManager/CLI.py:318 TunnelManager/CLI.py:336
+#, python-format
+msgid "Specified tunnel does not exist: %s"
+msgstr "Zadaný tunel neexistuje: %s"
+
+#: TunnelManager/CLI.py:348
+#, python-format
+msgid "No match for port in tunnel %(tun)s: %(port)s"
+msgstr "Žádná shoda pro port v tunelu %(tun)s: %(port)s"
+
+#: TunnelManager/CLI.py:359
+#, python-format
+msgid "No keys defined in %s"
+msgstr "V %s nezadány žádné klíče"
+
+#: TunnelManager/CLI.py:368
+msgid "No keys specified to add."
+msgstr "Nezadány žádné klíče pro přidání."
+
+#: TunnelManager/CLI.py:373
+#, python-format
+msgid "Specified key exists: %s"
+msgstr "Zadaný klíč existuje: %s"
+
+#: TunnelManager/CLI.py:384
+msgid "No keys specified to delete."
+msgstr "Nezadány žádné klíče ke smazání."
+
+#: TunnelManager/CLI.py:390
+#, python-format
+msgid "Specified key does not exist: %s"
+msgstr "Zadaný klíč neexistuje: %s"
+
+#: TunnelManager/Controller.py:109
+#, python-format
+msgid "Error loading file: %(file)s: (%(errno)d) %(errstr)s"
+msgstr "Chyba při načítání souboru: %(file)s: (%(errno)d) %(errstr)s"
+
+#: TunnelManager/Controller.py:111 TunnelManager/Controller.py:113
+#, python-format
+msgid "Error parsing XML file: %(file)s: %(err)s"
+msgstr "Chyba při zpracovávání souboru XML: %(file)s: %(err)s"
+
+#: TunnelManager/Controller.py:132
+msgid "Invalid XML: SSHKey without filename"
+msgstr "Neplatný XML: SSHKey bez názvu souboru"
+
+#: TunnelManager/Controller.py:173 TunnelManager/Controller.py:192
+msgid "Invalid XML: Port missing attribute(s)"
+msgstr "Neplatný XML: Portu chybí vlastnosti"
+
+#: TunnelManager/Controller.py:199
+msgid "Invalid XML: invalid/missing port type"
+msgstr "Neplatný XML: Neplatný/Chybějící typ portu"
+
+#: TunnelManager/Controller.py:225
+#, python-format
+msgid "Error saving tunnel config: (%(errno)d) %(errstr)s"
+msgstr "Chyba při ukládání nastavení tunelu: (%(errno)d) %(errstr)s"
+
+#: TunnelManager/Controller.py:283
+#, python-format
+msgid "Error removing tunnel %(tun)s = %(err)s"
+msgstr "Chyba při odstraňování tunelu %(tun)s = %(err)s"
+
+#: TunnelManager/Controller.py:293
+#, python-format
+msgid "Error removing key %(key)s = %(err)s"
+msgstr "Chyba při odstraňování klíče %(key)s = %(err)s"
+
+#: TunnelManager/GUI.py:75
+msgid "XML files"
+msgstr "Soubory XML"
+
+#: TunnelManager/GUI.py:98
+msgid "directory"
+msgstr "adresář"
+
+#: TunnelManager/GUI.py:99
+msgid "restore tunnel state"
+msgstr "obnovit stav tunelu"
+
+#: TunnelManager/GUI.py:101
+msgid "alternate glade file location"
+msgstr "alternativní umístění souboru glade"
+
+#: TunnelManager/GUI.py:177
+msgid "SSH Tunnel Manager - "
+msgstr "Správce tunelu SSH - "
+
+#: TunnelManager/GUI.py:181
+msgid "Untitled"
+msgstr "Bez názvu"
+
+#: TunnelManager/GUI.py:188
+msgid "State"
+msgstr "Stav"
+
+#: TunnelManager/GUI.py:189 data/tunnelmanager.glade.h:16
+msgid "Name"
+msgstr "Název"
+
+#: TunnelManager/GUI.py:190 data/tunnelmanager.glade.h:44
+msgid "User ID"
+msgstr "ID uživatele"
+
+#: TunnelManager/GUI.py:191 data/tunnelmanager.glade.h:38
+msgid "Tunnel Host"
+msgstr "Hostitel tunelu"
+
+#: TunnelManager/GUI.py:192 data/tunnelmanager.glade.h:40
+msgid "Tunnel Port"
+msgstr "Port tunelu"
+
+#: TunnelManager/GUI.py:193 data/tunnelmanager.glade.h:24
+msgid "Required Key"
+msgstr "Požadovaný klíč"
+
+#: TunnelManager/GUI.py:194 TunnelManager/GUI.py:216 TunnelManager/GUI.py:234
+#: data/tunnelmanager.glade.h:41
+msgid "Type"
+msgstr "Typ"
+
+#: TunnelManager/GUI.py:195 TunnelManager/GUI.py:217
+#: data/tunnelmanager.glade.h:6
+msgid "Bind IP"
+msgstr "Svázat IP"
+
+#: TunnelManager/GUI.py:196 TunnelManager/GUI.py:218
+#: data/tunnelmanager.glade.h:13
+msgid "Local Port"
+msgstr "Místní port"
+
+#: TunnelManager/GUI.py:197 TunnelManager/GUI.py:219
+#: data/tunnelmanager.glade.h:19
+msgid "Remote Host"
+msgstr "Vzdálený hostitel"
+
+#: TunnelManager/GUI.py:198 TunnelManager/GUI.py:220
+#: data/tunnelmanager.glade.h:20
+msgid "Remote Port"
+msgstr "Vzdálený port"
+
+#: TunnelManager/GUI.py:232
+msgid "File Name"
+msgstr "Název souboru"
+
+#: TunnelManager/GUI.py:233
+msgid "ID"
+msgstr "ID"
+
+#: TunnelManager/GUI.py:235
+msgid "Size"
+msgstr "Velikost"
+
+#: TunnelManager/GUI.py:236
+msgid "Fingerprint"
+msgstr "Otisk"
+
+#: TunnelManager/GUI.py:332
+msgid "Tunnel(s) Active. Really quit?"
+msgstr "Aktivní tunel(y). Opravdu chcete ukončit?"
+
+#: TunnelManager/GUI.py:383 TunnelManager/GUI.py:394
+msgid "Tunnel(s) Active. Stop before clearing config"
+msgstr "Aktivní tunel(y). Zastavte před vyčištěním nastavení"
+
+#: TunnelManager/GUI.py:450
+#, python-format
+msgid "Tunnel %s is active. Stop to edit."
+msgstr "Tunel %s je aktivní. Zastavte pro úpravy."
+
+#: TunnelManager/GUI.py:540
+msgid "The 'Name' field is required"
+msgstr "Pole 'Název' je vyžadováno"
+
+#: TunnelManager/GUI.py:543
+msgid "The 'Tunnel Host' field is required"
+msgstr "Pole'Hostitel tunelu' je vyžadováno"
+
+#: TunnelManager/GUI.py:546
+msgid "The 'Tunnel Port' field is required"
+msgstr "Pole'Port tunelu' je vyžadováno"
+
+#: TunnelManager/GUI.py:549
+msgid "Specify a port to tunnel."
+msgstr "Zadejte port k tunelování."
+
+#: TunnelManager/GUI.py:555
+#, python-format
+msgid "Invalid 'Tunnel Port': %s"
+msgstr "Neplatný 'Port tunelu': %s"
+
+#: TunnelManager/GUI.py:560
+#, python-format
+msgid "'Tunnel Port' out of range: %d"
+msgstr "'Port tunelu' je mimo rozsah: %d"
+
+#: TunnelManager/GUI.py:617 data/tunnelmanager.glade.h:37
+msgid "Stop Tunnel"
+msgstr "Zastavit tunel"
+
+#: TunnelManager/GUI.py:620 data/tunnelmanager.glade.h:35
+msgid "Start Tunnel"
+msgstr "Spustit tunel"
+
+#: TunnelManager/GUI.py:622 data/tunnelmanager.glade.h:8
+msgid "Edit Tunnel"
+msgstr "Upravit tunel"
+
+#: TunnelManager/GUI.py:624 data/tunnelmanager.glade.h:23
+msgid "Remove Tunnel"
+msgstr "Odstranit tunel"
+
+#: TunnelManager/GUI.py:664
+#, python-format
+msgid "Tunnel %s is active. Stop to remove."
+msgstr "Tunel %s je aktivní. Zastavte pro úpravy."
+
+#: TunnelManager/GUI.py:708
+msgid "Local"
+msgstr "Místní"
+
+#: TunnelManager/GUI.py:709
+msgid "Remote"
+msgstr "Vzdálený"
+
+#: TunnelManager/GUI.py:710
+msgid "Dynamic"
+msgstr "Dynamický"
+
+#: TunnelManager/GUI.py:777
+msgid "The 'Local Port' field is required"
+msgstr "Pole 'Místní port' je vyžadováno"
+
+#: TunnelManager/GUI.py:784
+#, python-format
+msgid "Invalid 'Local Port': %s"
+msgstr "Neplatný 'Místní port': %s"
+
+#: TunnelManager/GUI.py:789
+#, python-format
+msgid "'Local Port' out of range: %d"
+msgstr "'Místní port' je mimo rozsah: %d"
+
+#: TunnelManager/GUI.py:794
+msgid "The 'Remote Host' field is required"
+msgstr "Pole 'Vzdálená hostitel' je vyžadováno"
+
+#: TunnelManager/GUI.py:797
+msgid "The 'Remote Port' field is required"
+msgstr "Pole 'Vzdálený port' je vyžadováno"
+
+#: TunnelManager/GUI.py:804
+#, python-format
+msgid "Invalid 'Remote Port': %s"
+msgstr "Neplatný 'Vzdálený port': %s"
+
+#: TunnelManager/GUI.py:809
+#, python-format
+msgid "'Remote Port' out of range: %d"
+msgstr "'Vzdálený port' je mimo rozsah: %d"
+
+#: TunnelManager/GUI.py:828
+msgid "Select Private Key"
+msgstr "Vyberte soukromý klíč"
+
+#: TunnelManager/GUI.py:997
+msgid "Select Default Configuration"
+msgstr "Vyberte výchozí nastavení"
+
+#: TunnelManager/GUI.py:1015
+#, python-format
+msgid "Unexpected termination of tunnel: %s"
+msgstr "Neočekávané ukončení tunelu: %s"
+
+#: TunnelManager/GUI.py:1061
+msgid "Open File"
+msgstr "Otevřít soubor"
+
+#: TunnelManager/GUI.py:1066
+msgid "Save File"
+msgstr "Uložit soubor"
+
+#: TunnelManager/GUI.py:1080
+msgid "All files"
+msgstr "Všechny soubory"
+
+#: TunnelManager/StatusIcon.py:33 data/tunnelmanager.glade.h:29
+msgid "SSH Tunnel Manager"
+msgstr "Správce tunelu SSH"
+
+#: TunnelManager/StatusIcon.py:43 data/tunnelmanager.glade.h:10
+msgid "Load "
+msgstr "Načíst "
+
+#: TunnelManager/StatusIcon.py:45 data/tunnelmanager.glade.h:42
+msgid "Unload"
+msgstr "Uvolnit"
+
+#: TunnelManager/StatusIcon.py:47 data/tunnelmanager.glade.h:46
+msgid "View Agent"
+msgstr "Zobrazit agenta"
+
+#: TunnelManager/StatusIcon.py:51
+msgid "Keys"
+msgstr "Klíče"
+
+#: TunnelManager/StatusIcon.py:71
+msgid "Quit"
+msgstr "Ukončit"
+
+#: TunnelManager/TunnelInfo.py:123
+#, python-format
+msgid "Error removing port %(port)s = %(err)s"
+msgstr "Chyba při odstraňování portu %(port)s = %(err)s"
+
+#: TunnelManager/TunnelInfo.py:184
+#, python-format
+msgid "Tunnel already active: %s"
+msgstr "Tunel je již aktivní: %s"
+
+#: TunnelManager/TunnelInfo.py:192
+#, python-format
+msgid "Required key unknown to agent: %s"
+msgstr "Požadovaný klíč agent nezná: %s"
+
+#: TunnelManager/TunnelInfo.py:224
+#, python-format
+msgid "Tunnel already inactive: %s"
+msgstr "Tunel již není aktivní: %s"
+
+#: TunnelManager/TunnelInfo.py:235
+#, python-format
+msgid "Failed closing tunnel: %(name)s (%(errno)d/%(errstr)s)"
+msgstr "Nelze uzavřít tunel: %(name)s (%(errno)d/%(errstr)s)"
+
+#: data/tunnelmanager.glade.h:1
+msgid "Add Key"
+msgstr "Přidat klíč"
+
+#: data/tunnelmanager.glade.h:2
+msgid "Add Port"
+msgstr "Přidat port"
+
+#: data/tunnelmanager.glade.h:3
+msgid "Add Tunnel"
+msgstr "Přidat tunel"
+
+#: data/tunnelmanager.glade.h:4
+msgid "Add/Remove Keys"
+msgstr "Přidat odstranit klíče"
+
+#: data/tunnelmanager.glade.h:5
+msgid "Autosave on Exit"
+msgstr "Automaticky ukládat při ukončení"
+
+#: data/tunnelmanager.glade.h:7
+msgid "Default Config"
+msgstr "Výchozí nastavení"
+
+#: data/tunnelmanager.glade.h:9
+msgid "Launch in System Tray"
+msgstr "Spustit v systémové liště"
+
+#: data/tunnelmanager.glade.h:11
+msgid "Load Keys"
+msgstr "Načíst klíče"
+
+#: data/tunnelmanager.glade.h:12
+msgid "Load Keys on Startup"
+msgstr "Načíst klíče při spuštění"
+
+#: data/tunnelmanager.glade.h:14
+msgid "Manage"
+msgstr "Správa"
+
+#: data/tunnelmanager.glade.h:15
+msgid "Minimize to System Tray"
+msgstr "Minimalizovat do systémové lišty"
+
+#: data/tunnelmanager.glade.h:17
+msgid "Port Info"
+msgstr "Informace o portu"
+
+#: data/tunnelmanager.glade.h:18
+msgid "Preferences"
+msgstr "Nastaveni"
+
+#: data/tunnelmanager.glade.h:21
+msgid "Remove Key"
+msgstr "Odstranit klíč"
+
+#: data/tunnelmanager.glade.h:22
+msgid "Remove Port"
+msgstr "Odstranit port"
+
+#: data/tunnelmanager.glade.h:25
+msgid "SSH Agent"
+msgstr "Agent SSH"
+
+#: data/tunnelmanager.glade.h:26
+msgid "SSH Agent PID"
+msgstr "PID agenta SSH"
+
+#: data/tunnelmanager.glade.h:27
+msgid "SSH Authorization Socket"
+msgstr "Ověřovaci soket SSH"
+
+#: data/tunnelmanager.glade.h:28
+msgid "SSH Keys"
+msgstr "Klíče SSH"
+
+#: data/tunnelmanager.glade.h:30
+msgid "Save Config"
+msgstr "Uložit nastaveni"
+
+#: data/tunnelmanager.glade.h:31
+msgid "Save/Restore Tunnel State"
+msgstr "Uložit/Obnovit stav tunelu"
+
+#: data/tunnelmanager.glade.h:32
+msgid "Select..."
+msgstr "Vybrat…"
+
+#: data/tunnelmanager.glade.h:33
+msgid "Show System Tray Icon"
+msgstr "Zobrazit ikonu v systémové liště"
+
+#: data/tunnelmanager.glade.h:34
+msgid "Start"
+msgstr "Spustit"
+
+#: data/tunnelmanager.glade.h:36
+msgid "Stop"
+msgstr "Zastavit"
+
+#: data/tunnelmanager.glade.h:39
+msgid "Tunnel Info"
+msgstr "Informace o tunelu"
+
+#: data/tunnelmanager.glade.h:43
+msgid "Unload Keys"
+msgstr "Uvolnit klíče"
+
+#: data/tunnelmanager.glade.h:45
+msgid "View"
+msgstr "Zobrazit"
+
+#: data/tunnelmanager.glade.h:47
+msgid "_File"
+msgstr "_Soubor"
+
+#: data/tunnelmanager.glade.h:48
+msgid "_Help"
+msgstr "_Nápověda"
+
+#: data/tunnelmanager.glade.h:49
+msgid "_Keys"
+msgstr "_Klíče"
+
+#: data/tunnelmanager.glade.h:50
+msgid "_Load"
+msgstr "_Načíst"
+
+#: data/tunnelmanager.glade.h:51
+msgid "_Manage"
+msgstr "_Správa"
+
+#: data/tunnelmanager.glade.h:52
+msgid "_Tunnel"
+msgstr "_Tunel"
+
+#: data/tunnelmanager.glade.h:53
+msgid "_Unload"
+msgstr "_Uvolnit"
+
+#: data/tunnelmanager.glade.h:54
+msgid "_View Agent"
+msgstr "_Zobrazit agenta"
