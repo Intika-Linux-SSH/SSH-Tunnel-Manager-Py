@@ -6,4 +6,4 @@ Exec=tunnelmanager
 Type=Application
 Categories=GTK;Network;
 StartupNotify=true
-Icon=gtk-network
+Icon=network-server
