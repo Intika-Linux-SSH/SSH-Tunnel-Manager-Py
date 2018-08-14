@@ -98,7 +98,7 @@ class StatusIcon(object):
         self.addToMenu(keyMenu,_("View Agent"),gtk.STOCK_INFO,
                        self.gui.on_view_agent)
 
-        
+
         keysItem = self.addToMenu(self.menu,_('Keys'),
                                   gtk.STOCK_DIALOG_AUTHENTICATION)
         keysItem.set_submenu(keyMenu)
@@ -119,14 +119,14 @@ class StatusIcon(object):
         self.menu.append(separator)
         separator.show()
 
-        
+
         if(self.gui.mainWindow == None or
                 self.gui.mainWindow.iconify_initially):
             self.addToMenu(self.menu, None, gtk.STOCK_EDIT,
                     self.toggleHide)
         self.addToMenu(self.menu, None, gtk.STOCK_PREFERENCES,
                        self.gui.on_preferences)
-        self.addToMenu(self.menu, None, gtk.STOCK_QUIT, 
+        self.addToMenu(self.menu, None, gtk.STOCK_QUIT,
                        self.gui.on_quit)
 
         if (APP_INDICATOR_AVAILABLE):

@@ -9,7 +9,7 @@ setup(name='tunnelmanager',
       author_email='opensource@subakutty.net',
       url='http://www.subakutty.net/tunnelmanager/',
       license='GPL v2',
-      
+
       packages=['TunnelManager'],
       scripts=['tunnelmanager','tunnelrunner','tunnelmanager_cli','tunnelrunner_askpass'],
       data_files=[('share/applications', ['data/tunnelmanager.desktop']),

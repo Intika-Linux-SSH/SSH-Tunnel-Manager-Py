@@ -37,4 +37,4 @@ class GtkErrorReporter(ErrorReporter.ErrorReporter):
                                    buttons=gtk.BUTTONS_OK)
         dialog.run()
         dialog.destroy()
-        
+

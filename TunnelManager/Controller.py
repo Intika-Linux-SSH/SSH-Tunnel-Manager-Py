@@ -109,7 +109,7 @@ class Controller(object):
             tmplist = config.safeGet('DEFAULT', 'sshbaseargs')
         self.__m_sshbaseargs = tmplist
 
-        config.safeSet('DEFAULT','defaultFile', 
+        config.safeSet('DEFAULT','defaultFile',
                        self.configpath + "/default.xml")
         if(not tunnelFile):
             tunnelFile = config.safeGet('BASE','defaultFile')
@@ -129,7 +129,7 @@ class Controller(object):
         del self.tunnelList[:]
         try:
             xml_document = minidom.parse(fileName)
-            parse_result = ((self.readKeys(xml_document)) and 
+            parse_result = ((self.readKeys(xml_document)) and
                             (self.readTunnels(xml_document)))
         except IOError, (errno, strerror):
             self.errorReporter.showError(_("Error loading file: %(file)s: (%(errno)d) %(errstr)s") % { 'file':fileName, 'errno':errno, 'errstr':strerror })
@@ -183,7 +183,7 @@ class Controller(object):
                                        self.errorReporter,
                                        self,
                                        needsActivate)
-                                                  
+
                 for pnode in node.childNodes:
                     if(pnode.nodeName == "Port"):
                         type = pnode.getAttribute("type")
@@ -194,8 +194,8 @@ class Controller(object):
                         if(type in ("local","local fwd","remote","remote fwd")):
                             remote_host = pnode.getAttribute("remote_host")
                             remote_port = pnode.getAttribute("remote_port")
-                            if(not local_port or 
-                               not remote_host or 
+                            if(not local_port or
+                               not remote_host or
                                not remote_port):
                                 self.errorReporter.showError(
                                     _("Invalid XML: Port missing attribute(s)"))
@@ -223,7 +223,7 @@ class Controller(object):
                                 return False
                             newPort = PortInfo.DynamicPort(
                                 name,
-                                bind_ip, 
+                                bind_ip,
                                 local_port)
                         else:
                             self.errorReporter.showError(
@@ -382,7 +382,7 @@ class Controller(object):
 
     def updateKeysFromAgent(self):
         """Keys were loaded. Update key data from the agent."""
-        pipe = subprocess.Popen(["/usr/bin/ssh-add","-l"], 
+        pipe = subprocess.Popen(["/usr/bin/ssh-add","-l"],
                                 stdout=subprocess.PIPE)
         stdout = pipe.communicate()[0]
         if(pipe.returncode == 0):
@@ -416,7 +416,7 @@ class Controller(object):
     def lookupKey(self,term):
         """Use term to lookup the key by fingerprint, filename, or id."""
         for key in self.keyList:
-            if(key.filename == term    or 
+            if(key.filename == term    or
                key.id == term          or
                key.fingerprint == term ):
 

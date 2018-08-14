@@ -112,8 +112,8 @@ class Application(object):
     def parse_opts(self,args):
         """Parse the commandline options."""
         try:
-            opts, args = getopt.getopt(sys.argv[1:], 
-                                       "hag:f:P:", 
+            opts, args = getopt.getopt(sys.argv[1:],
+                                       "hag:f:P:",
                                        ["help","autostart",
                                         "gladepath=","file=","properties="])
         except getopt.GetoptError, e:
@@ -147,7 +147,7 @@ class Application(object):
             print >>sys.stderr, _("Extra arguments: "), args
             self.usage()
             sys.exit(2)
-    
+
         return (configFile,autoStart,paramFile,gladePath)
 
 
@@ -364,7 +364,7 @@ class Application(object):
                 self.quit_on_destroy = True
                 self.destroyWindow()
             else:
-                if(self.config.safeGetBoolean('GUI','autoSave') and 
+                if(self.config.safeGetBoolean('GUI','autoSave') and
                    self.controller.isDirty):
                     self.on_save(None)
                 self.controller.stopTunnels()
@@ -387,7 +387,7 @@ class Application(object):
         """Handle object destroy for application window"""
         if(self.quit_on_destroy == False):
             return True
-        if(self.config.safeGetBoolean('GUI','autoSave') and 
+        if(self.config.safeGetBoolean('GUI','autoSave') and
            self.controller.isDirty):
             self.on_save(None)
         self.controller.stopTunnels()
@@ -436,7 +436,7 @@ class Application(object):
             start_dir = os.path.dirname(os.path.realpath(self.controller.filename))
         if not os.path.isdir(start_dir):
             start_dir = None
-        newFile = self.selectFile(gtk.FILE_CHOOSER_ACTION_OPEN, 
+        newFile = self.selectFile(gtk.FILE_CHOOSER_ACTION_OPEN,
                                   [self.filter],
                                   base_directory=start_dir,
                                   file_name=self.controller.filename,
@@ -465,7 +465,7 @@ class Application(object):
             start_dir = os.path.dirname(os.path.realpath(self.controller.filename))
         if not os.path.isdir(start_dir):
             start_dir = None
-        newFile = self.selectFile(gtk.FILE_CHOOSER_ACTION_SAVE, 
+        newFile = self.selectFile(gtk.FILE_CHOOSER_ACTION_SAVE,
                                   [self.filter],
                                   base_directory=start_dir,
                                   file_name=self.controller.filename,
@@ -898,7 +898,7 @@ class Application(object):
         """Add an ssh key to the list of registered keys"""
         title=_("Select Private Key")
         directory=os.environ.get("HOME")+"/.ssh"
-        filename = self.selectFile(gtk.FILE_CHOOSER_ACTION_OPEN, [], 
+        filename = self.selectFile(gtk.FILE_CHOOSER_ACTION_OPEN, [],
                                    title=title,
                                    base_directory=directory)
         if(filename != ""):
@@ -953,7 +953,7 @@ class Application(object):
         if sock is not None:
             sockEntry = agentTree.get_object("sockEntry")
             sockEntry.set_text(sock)
-        pipe = subprocess.Popen(["/usr/bin/ssh-add","-l"], 
+        pipe = subprocess.Popen(["/usr/bin/ssh-add","-l"],
                                 stdout=subprocess.PIPE)
         stdout = pipe.communicate()[0]
         if(pipe.returncode == 0):
@@ -1136,7 +1136,7 @@ class Application(object):
         return False
 
 
-    def selectFile(self, action, filters, title=None, 
+    def selectFile(self, action, filters, title=None,
                    file_extension=None, file_name=None, base_directory=None):
         """This function is used to select a file to open"""
 

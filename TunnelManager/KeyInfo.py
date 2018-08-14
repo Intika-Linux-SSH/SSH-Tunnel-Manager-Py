@@ -71,7 +71,7 @@ class KeyInfo(object):
 
     def readAttributesFromFile(self):
         """Read attributes about key from key file"""
-        proc = subprocess.Popen(["/usr/bin/ssh-keygen", "-l", "-f", 
+        proc = subprocess.Popen(["/usr/bin/ssh-keygen", "-l", "-f",
                                  self.filename], stdout=subprocess.PIPE)
         stdout = proc.communicate()[0]
         if(proc.returncode != 0):
@@ -126,7 +126,7 @@ class KeyInfo(object):
 
     def getAttributes(self):
         """Get an array of attributes for the key"""
-        returnList = [os.path.basename(self.filename), 
+        returnList = [os.path.basename(self.filename),
                       os.path.basename(self.id),
                       self.type, self.size, self.fingerprint]
         return returnList

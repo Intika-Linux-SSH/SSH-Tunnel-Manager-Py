@@ -48,13 +48,13 @@ class PortInfo(object):
     def getTypeString(self):
         """Get the type to display as a string"""
         return "unknown"
-            
+
 
     def getAttributes(self):
         """Get the port's attributes as a list."""
         returnList = [self.type]
         return returnList
-        
+
 
     def commandString(self):
         """Returns the port in the form for a command line arg"""
@@ -157,7 +157,7 @@ class ForwardPort(PortInfo):
                       self.remoteHost,
                       self.remotePort]
         return returnList
-        
+
 
     def write(self, document, tunnelElement):
         """Write the port to XML"""
@@ -237,7 +237,7 @@ class DynamicPort(PortInfo):
                       None,    #All port types must have the same attr count.
                       None];   #All port types must have the same attr count.
         return returnList
-        
+
 
     def write(self, document, tunnelElement):
         """Write the port to XML"""

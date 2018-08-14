@@ -98,20 +98,20 @@ class Application(object):
 \t-D|--dynamic    -- %(dynamic)s
 \t-K|--keyfile    -- %(keyfile)s
 """ % { 'cmd':sys.argv[0], 'file':_("file"), 'command':_("command"),
-        'opt':_("options"), 'help':_("output this message"), 
+        'opt':_("options"), 'help':_("output this message"),
         'conf':_("config file to load"), 'props':_("properties file to load"),
-        'exec':_("command to execute"), 'name':_("tunnel name"), 
+        'exec':_("command to execute"), 'name':_("tunnel name"),
         'host':_("tunnel host"), 'port':_("tunnel port"),
-        'keyid':_("key ID"), 'local':_("local port forward"), 
-        'remote':_("remote port forward"), 
-        'dynamic':_("dynamic SOCKS proxy port"), 
+        'keyid':_("key ID"), 'local':_("local port forward"),
+        'remote':_("remote port forward"),
+        'dynamic':_("dynamic SOCKS proxy port"),
         'keyfile':_("SSH private key filename") }
 
 
     def parse_opts(self,args):
         """Parse the command line options."""
         try:
-            opts, args = getopt.getopt(sys.argv[1:], 
+            opts, args = getopt.getopt(sys.argv[1:],
                                        "hf:c:n:H:p:k:L:R:D:K:N:P:", [
                                                "help","file=","command=",
                                                "name=","host=","port=","key=",
